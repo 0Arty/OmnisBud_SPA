@@ -1,0 +1,30 @@
+.box {
+    margin-top: 20px;
+    width: 140px;
+    .list {
+        ul {
+            margin-top: 10px;
+            li {
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 16px;
+                letter-spacing: 0.05em;
+                color: #FFFFFF;
+                transition: 0.5s;
+
+                &:hover {
+                    transition: 0.5s;
+                    color: #D4C17F;
+                    cursor: pointer;
+                }
+
+                &:not(:last-child) {
+                    margin: 0 40px 40px 0;
+                }
+            }
+        }
+    }
+}
+

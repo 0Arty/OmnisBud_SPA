@@ -1,0 +1,61 @@
+.box {
+    margin: 55px 89px 0 0;
+
+    .list {
+        ul {
+            display: flex;
+
+            li {
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 0.05em;
+                color: #FFFFFF;
+                transition: 0.5s;
+
+                &:hover {
+                    transition: 0.5s;
+                    color: #D4C17F;
+                    cursor: pointer;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 42px;
+                }
+            }
+        }
+    }
+
+    .menu {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 1109px) {
+    .box {
+        .list {
+            .ul {
+                .wrapper {
+                    width: 100vw;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 760px) {
+    .box {
+        margin: 20px 10px 0 0  ;
+        .list {
+                display: none;
+        }
+
+        .menu {
+            display: block;
+        }
+    }
+}
