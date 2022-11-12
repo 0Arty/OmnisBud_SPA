@@ -1,0 +1,50 @@
+.box {
+    min-height: 300px;
+    width: 140px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+
+    div {
+        margin-top: 100px;
+        min-height: 10px;
+
+        span {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 27px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+    }
+}
+
+@media only screen and (max-width:1200px) {
+    .box {
+        div {
+            margin-top: 50px;
+        }
+        width: 33%;
+    }
+}
+
+@media only screen and (max-width:650px) {
+    .box {
+        div {
+            margin-top: 50px;
+        }
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .box {
+        div {
+            margin-top: 50px;
+        }
+        width: 75%;
+    }
+}
