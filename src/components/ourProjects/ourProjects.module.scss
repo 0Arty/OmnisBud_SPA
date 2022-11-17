@@ -1,24 +1,13 @@
 .box {
     width: 1110px;
-    height: 90vh;
-    margin: 0 auto;
-    margin-top: 130px;
+    min-height: 100px;
+    margin: 130px auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: relative;
-    z-index: 10;
 
-    // .effect{
-    //     position: absolute;
-    //     z-index: 100;
-    //     background: linear-gradient(180deg, #242B33 0%, rgba(36, 43, 51, 0.1) 42.18%, #242B33 100%);
-    //     width: 1110px;
-    //     height: 900px;
-    //     margin-top: calc(1012px - 900px);
-    // }
     span {
-        margin-left: 40px;
+        // margin-left: 40px;
         margin-bottom: 20px;
         font-family: 'Playfair Display';
         font-style: normal;
@@ -27,20 +16,17 @@
         line-height: 48px;
         color: #D4C17F;
     }
-
     .content {
         width: 100%;
         height: 85vh;
     }
 }
 
-
 @media screen and (max-width: 1109px) {
     .box {
         width: 900px;
     }
 }
-
 @media screen and (max-width: 915px) {
     .box {
         width: 100vw;

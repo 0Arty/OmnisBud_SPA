@@ -4,19 +4,12 @@ import Slider from './slider/Slider';
 
 const OurProjects = () => {
 
-
     return (
         <div className={s.box}>
             <span>Приклади наших робіт</span>
             <div className={s.content}>
                 <Slider />
-
-
             </div>
-
-
-            <div className={s.effect} />
-
         </div>
     );
 }

@@ -4,10 +4,10 @@ import List from './List/List';
 import Logo from './Logo/Logo';
 
 const Header = () => {
+    const bgUrl = `url(${process.env.PUBLIC_URL + "images/header_background_image.png"})`
+
     return (
-        <div className={s.box}
-            style={{ backgroundImage: `url(${process.env.PUBLIC_URL + "images/header_background_image.png"})` }}
-        >
+        <div className={s.box} style={{ backgroundImage: bgUrl}}>
             <div className={s.container}>
                 <div className={s.wrapper}>
                     <Logo />

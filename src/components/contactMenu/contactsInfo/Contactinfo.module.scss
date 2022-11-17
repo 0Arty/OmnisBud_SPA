@@ -1,0 +1,36 @@
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 555px;
+    height: 100%;
+    .text {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .heading {
+        margin-top: 114px;
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 48px;
+        color: #D4C17F;
+    }
+    .title {
+        margin-top: 50px;
+        color: #FFFFFF;
+    }
+    .subtitle {
+        margin-top: 20px;
+        color: #D4C17F;
+    }
+    ul {
+        color: #D4C17F;
+        li {
+            margin-top: 10px;
+        }
+    }
+}

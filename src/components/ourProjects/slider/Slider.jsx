@@ -16,7 +16,11 @@ const Slider = ({ images }) => {
         '/images/masonry/4.png',
         '/images/masonry/5.png',
         '/images/masonry/6.jpg',
+        '/images/masonry/7.jpg',
+        '/images/masonry/8.jpg',
+        '/images/masonry/9.jpg',
     ]
+
     return (
         <div className={s.box}>
             <Swiper
@@ -26,7 +30,25 @@ const Slider = ({ images }) => {
                 modules={[Navigation, Scrollbar]}
                 navigation={true}
             >
-                <SwiperSlide>
+
+                {
+                    imagesArray.map((img, index) => {
+                        return (
+                            <SwiperSlide key={index}>
+                                <div className={s.slide}>
+                                    <div
+                                        className={s.img}
+                                        style={{ backgroundImage: `url(${process.env.PUBLIC_URL + img})` }}
+                                    >
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        )
+                    })
+                }
+
+
+                {/* <SwiperSlide>
                     <div className={s.slide}>
                         <div
                             className={s.img}
@@ -65,7 +87,7 @@ const Slider = ({ images }) => {
 
                         </div>
                     </div>
-                </SwiperSlide>
+                </SwiperSlide> */}
 
 
             </Swiper>
