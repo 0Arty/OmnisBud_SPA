@@ -31,10 +31,12 @@ $duration: 0.3s;
             font-size: 14px;
             line-height: 27px;
             color: #BEBEBE;
-            &:focus{
+
+            &:focus {
                 color: #D4C17F;
             }
         }
+
     }
 
     .inputs2 {
@@ -85,16 +87,20 @@ input:hover,
     .box {
         width: 255px;
         flex-direction: column;
+
         .inputs {
             flex-direction: column;
+
             input {
                 margin-bottom: 10px;
             }
         }
-        .inputs2{
+
+        .inputs2 {
             width: 50%;
             flex-direction: column-reverse;
-            span{
+
+            span {
                 margin-top: 15px;
             }
         }
@@ -108,21 +114,23 @@ input:hover,
     .box {
         width: 255px;
         flex-direction: column;
+        margin-top: 50px;
+
         .inputs {
             flex-direction: column;
+
             input {
                 margin-bottom: 10px;
             }
         }
-        .inputs2{
+
+        .inputs2 {
             width: 255px;
             flex-direction: column-reverse;
-            span{
+
+            span {
                 margin-top: 15px;
             }
         }
     }
 }
-
-
-

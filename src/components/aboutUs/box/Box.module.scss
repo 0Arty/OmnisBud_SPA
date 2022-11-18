@@ -42,9 +42,12 @@
 
 @media only screen and (max-width:400px) {
     .box {
+        width: 75%;
+
         div {
             margin-top: 50px;
+
         }
-        width: 75%;
+        
     }
 }

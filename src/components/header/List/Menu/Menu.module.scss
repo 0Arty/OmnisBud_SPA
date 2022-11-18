@@ -1,6 +1,9 @@
 .box {
     margin-top: 20px;
     width: 140px;
+    position: absolute;
+    right: 0;
+    z-index: 100;
     .list {
         ul {
             margin-top: 10px;
@@ -27,4 +30,3 @@
         }
     }
 }
-

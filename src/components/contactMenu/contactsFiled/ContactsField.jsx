@@ -1,19 +1,25 @@
 import classNames from 'classnames';
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import s from './ContactsField.module.scss'
 import { useDispatch, useSelector } from 'react-redux'
 import { setName, setNumberOfPhone } from '../../../redux/contact';
 import emailjs from 'emailjs-com'
-
 
 const ContactsField = () => {
 
 
   const form = useRef();
   const dispatch = useDispatch()
-  const number = useSelector((state) => state.contact.numberOfPhone)
   const name = useSelector((state) => state.contact.name)
+  const number = useSelector((state) => state.contact.numberOfPhone)
 
+  const changeInputName = (e) => dispatch(setName(e.target.value))
+  const changePhone = (e) => dispatch(setNumberOfPhone(e.target.value))
+  
+  const clearForm = () => {
+    dispatch(setName(''))
+    dispatch(setNumberOfPhone(''))
+  }
 
   const sendData = (e) => {
     e.preventDefault();
@@ -31,22 +37,10 @@ const ContactsField = () => {
           alert('message sent successfully...');
           console.log(result.text);
         },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+        (error) => {console.log(error.text);},
+      )
+      clearForm()
   };
-
-
-  const dataCheck = () =>{
-    
-
-
-    sendData()
-  }
-
-  const changeInputName = (e) => dispatch(setName(e.target.value))
-  const changePhone = (e) => dispatch(setNumberOfPhone(e.target.value))
 
   return (
     <div className={s.box}>
@@ -54,15 +48,12 @@ const ContactsField = () => {
       <form ref={form} onSubmit={ sendData}>
 
         <div className={s.inputs}>
-          <input type="text" placeholder="Ваше Ім'я"
-            onChange={changeInputName} value={name} name='user_name'
+          <input type="text" placeholder="Ваше Ім'я" onChange={changeInputName} value={name} 
+          name='user_name'required minLength="2"
           />
-          <div className={s.error}></div>
-
-          <input type="text" placeholder='Ваш телефон'
-            onChange={changePhone} value={number} name='user_phone' />
-            
-          <div className={s.error}></div>
+          <input type="text" placeholder='Ваш телефон' onChange={changePhone} value={number} 
+          name='user_phone' required minLength="10" maxLength="12"
+          />
         </div>
 
         <div className={s.inputs2}>

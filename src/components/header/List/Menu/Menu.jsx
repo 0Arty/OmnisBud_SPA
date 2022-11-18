@@ -3,19 +3,13 @@ import s from './Menu.module.scss'
 import s2 from './hamburger.module.scss'
 import { motion, AnimatePresence } from 'framer-motion';
 import classNames from 'classnames';
+import { Link } from 'react-scroll';
 
 const Menu = () => {
 
     const [isOpen, setIsOpen] = useState(false)
     const btn = useRef()
-    const stick1 = useRef()
-    const stick2 = useRef()
-    const stick3 = useRef()
-
-    const openFunc = () => {
-
-        setIsOpen(!isOpen)
-    }
+    const openFunc = () => { setIsOpen(!isOpen) }
     const variableForAnimation = {
         init: {
             x: 1000,
@@ -30,9 +24,8 @@ const Menu = () => {
             opacity: 0,
         }
     }
+
     return (
-
-
         <div className={s.box}>
             <div className={s2.menu_wrapper}
                 onClick={() => { openFunc() }}
@@ -53,10 +46,26 @@ const Menu = () => {
 
                     >
                         <ul>
-                            <li>Про нас</li>
-                            <li>Наші роботи</li>
-                            <li>Контакти</li>
-                            <li>Ціни</li>
+                            <li>
+                                <Link to='AboutUs' spy={true} offset={-50}
+                                    smooth={true} duration={500}
+                                >Про нас</Link>
+                            </li>
+                            <li>
+                                <Link to='OurProjects' spy={true} offset={-20}
+                                    smooth={true} duration={500}
+                                >Наші роботи</Link>
+                            </li>
+                            <li>
+                                <Link to='ContactMenu' spy={true} offset={-50}
+                                    smooth={true} duration={500}
+                                >Контакти</Link>
+                            </li>
+                            <li>
+                                <Link to='ContactMenu' spy={true} offset={-50}
+                                    smooth={true} duration={500}
+                                >Ціни</Link>
+                            </li>
                         </ul>
                     </motion.div>
                 )}

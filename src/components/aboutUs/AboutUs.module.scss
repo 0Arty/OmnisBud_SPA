@@ -1,8 +1,9 @@
-.box{
+.box {
     width: 1110px;
     margin: 0 auto;
-    margin-top: 170px ;
-    .content{
+    margin-top: 170px;
+
+    .content {
         display: flex;
         justify-content: space-between;
         text-align: center;
@@ -12,8 +13,16 @@
 }
 
 
-@media only screen and (max-width:1200px){
-    .box{
+@media only screen and (max-width:1200px) {
+    .box {
         width: 100%;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .box {
+        .content {
+            justify-content: center;
+        }
     }
 }
