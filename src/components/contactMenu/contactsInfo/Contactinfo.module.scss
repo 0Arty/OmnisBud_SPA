@@ -3,6 +3,7 @@
     flex-direction: column;
     width: 555px;
     height: 100%;
+    
     .text {
         font-family: 'Raleway';
         font-style: normal;
@@ -11,7 +12,7 @@
         line-height: 24px;
     }
     .heading {
-        margin-top: 114px;
+
         font-family: 'Playfair Display';
         font-style: normal;
         font-weight: 700;
@@ -28,9 +29,24 @@
         color: #D4C17F;
     }
     ul {
-        color: #D4C17F;
+        
         li {
             margin-top: 10px;
+
+            a{
+                text-decoration: none;
+                color: #D4C17F;
+            }
         }
     }
 }
+
+
+@media only screen and (max-width:555px) {
+    .box{
+        padding: 0 10px;
+        width: 100vw;
+    }
+}
+
+

@@ -16,6 +16,31 @@
             margin: 0 auto;
             width: 1110px;
             height: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 114px 10px 0 10px;
+
+        }
+    }
+}
+@media only screen and (max-width:1110px) {
+    .box{
+        .effect{
+            .content{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:831px) {
+    .box{
+        .effect{
+            .content{
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+            }
         }
     }
 }

@@ -1,0 +1,128 @@
+$duration: 0.3s;
+
+.box {
+    width: 555px;
+    min-height: 20px;
+
+    .inputs {
+        display: flex;
+        justify-content: space-between;
+
+        input {
+            width: 255px;
+            height: 50px;
+            background: rgb(255, 255, 255, 0.2);
+            outline: none;
+            -webkit-appearance: none;
+            border-style: none;
+            transition: $duration;
+
+            &:focus {
+                background: rgb(255, 255, 255, 0.3);
+                transition: $duration;
+            }
+        }
+
+        input[type=text] {
+            padding-left: 20px;
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 27px;
+            color: #BEBEBE;
+            &:focus{
+                color: #D4C17F;
+            }
+        }
+    }
+
+    .inputs2 {
+        margin-top: 35px;
+        display: flex;
+        justify-content: space-between;
+
+        span {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 16px;
+            text-align: center;
+            color: #E7E7E7;
+            width: 255px;
+        }
+
+        input {
+            width: 255px;
+            height: 50px;
+            background: #D4C17F;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            //text decor
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 27px;
+            text-align: center;
+            color: #FFFFFF;
+            outline: none;
+            -webkit-appearance: none;
+            border-style: none;
+        }
+    }
+}
+
+input:hover,
+.btn {
+    cursor: pointer;
+    transition: $duration;
+}
+
+@media only screen and (min-width:831px) and (max-width:1140px) {
+    .box {
+        width: 255px;
+        flex-direction: column;
+        .inputs {
+            flex-direction: column;
+            input {
+                margin-bottom: 10px;
+            }
+        }
+        .inputs2{
+            width: 50%;
+            flex-direction: column-reverse;
+            span{
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+
+
+
+@media only screen and (min-width:0px) and (max-width:570px) {
+    .box {
+        width: 255px;
+        flex-direction: column;
+        .inputs {
+            flex-direction: column;
+            input {
+                margin-bottom: 10px;
+            }
+        }
+        .inputs2{
+            width: 255px;
+            flex-direction: column-reverse;
+            span{
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+
+

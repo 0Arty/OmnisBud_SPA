@@ -10,9 +10,9 @@ const Contactinfo = () => {
             вами на зв’язок в найближчий час або напишіть листа нам на електронну пошту.</span>
             <span className={classNames(s.subtitle, s.text)}>Наші контакти:</span>
             <ul className={classNames(s.text)}>
-                <li>+380931234567</li>
-                <li>+380931234567</li>
-                <li>example@gmail.com</li>
+                <li><a href="tel:">+380931234567</a></li>
+                <li><a href="tel:">+380931234567</a></li>
+                <li><a href="mailto:">example@gmail.com</a></li>
             </ul>
         </div>
     );

@@ -12,8 +12,11 @@ const ContactMenu = () => {
         <div className={s.box} style={{ backgroundImage: bgUrl }}>
             <div className={s.effect}>
                 <div className={s.content}>
-                    <Contactinfo />
-                    <ContactsField />
+
+                        <Contactinfo />
+                        <ContactsField />
+
+
                 </div>
             </div>
         </div>
